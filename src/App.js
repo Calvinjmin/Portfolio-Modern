@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="relative min-h-screen flex flex-col">
       <Navbar />
-      <div className="bg-gray-200 flex-grow flex flex-col items-center justify-center p-4">
+      <div className="flex-grow flex flex-col items-center justify-center p-4">
         {/* Container for content with max-width and centered alignment */}
         <div className="max-w-2xl w-full px-4">
           {/* Introduction */}

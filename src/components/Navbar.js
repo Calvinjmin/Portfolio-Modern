@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import {
+  ArrowTopRightOnSquareIcon,
+  DocumentTextIcon,
+} from "@heroicons/react/24/outline"; // Ensure correct import path
 
 export default function Navbar() {
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleDropdown = (menu) => {
+    setOpenDropdown(openDropdown === menu ? null : menu);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleNavigation = (url) => {
+    window.location.href = url;
+  };
+
   return (
     <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex items-center">
+      <div className="container mx-auto flex items-center justify-between">
         {/* Avatar and Site Name Container */}
         <div className="flex items-center space-x-4">
           <img
@@ -15,35 +34,115 @@ export default function Navbar() {
             Calvin Min
           </a>
         </div>
-        {/* Navigation Links */}
+
+        {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-4 ml-auto">
-          <a
-            href="/resume.pdf"
-            className="text-white hover:bg-gray-700 px-3 py-2 rounded"
+          {/* Resume Link */}
+          <button
+            onClick={() => handleNavigation("https://drive.google.com/file/d/11IbURcbvUV6PHcMvZQ96yU8btLkqT9qI/view?usp=sharing")}
+            className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
           >
             Resume
-          </a>
-          <a
-            href="#services"
-            className="text-white hover:bg-gray-700 px-3 py-2 rounded"
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            className="text-white hover:bg-gray-700 px-3 py-2 rounded"
-          >
-            Certifications
-          </a>
-          <a
-            href="#about"
-            className="text-white hover:bg-gray-700 px-3 py-2 rounded"
-          >
-            Socials
-          </a>
+            <DocumentTextIcon className="w-5 h-5 ml-2" />
+          </button>
+
+          {/* Projects Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("projects")}
+              className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
+            >
+              Projects
+            </button>
+            {openDropdown === "projects" && (
+              <div className="absolute top-full mt-2 w-48 bg-gray-700 rounded-lg shadow-lg">
+                <a
+                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Personal Portfolio
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/Advent"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Advent of Code
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/MetaBS"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Meta Brawl Stars
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            )}
+          </div>
+
+          {/* Certifications Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("certifications")}
+              className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
+            >
+              Certifications
+            </button>
+            {openDropdown === "certifications" && (
+              <div className="absolute top-full mt-2 w-48 bg-gray-700 rounded-lg shadow-lg">
+                <a
+                  href="https://www.credly.com/badges/d4683e3a-e78c-451e-91ac-1fdc21e42e64/linked_in?t=rhdsh3"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  AWS Solutions Architect
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            )}
+          </div>
+
+          {/* Socials Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("socials")}
+              className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
+            >
+              Socials
+            </button>
+            {openDropdown === "socials" && (
+              <div className="absolute top-full mt-2 w-48 bg-gray-700 rounded-lg shadow-lg">
+                <a
+                  href="https://www.linkedin.com/in/calvinjmin/"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  LinkedIn
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Github
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="mailto: calvinjmin@gmail.com"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Email
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            )}
+          </div>
         </div>
+
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white focus:outline-none ml-auto">
+        <button
+          className="md:hidden text-white focus:outline-none ml-auto"
+          onClick={toggleMobileMenu}
+        >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -60,6 +159,111 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-gray-800 p-4 absolute top-16 left-0 w-full z-50">
+          {/* Resume Link */}
+          <button
+            onClick={() => handleNavigation("https://drive.google.com/file/d/11IbURcbvUV6PHcMvZQ96yU8btLkqT9qI/view?usp=sharing")}
+            className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full mb-2"
+          >
+            Resume
+            <DocumentTextIcon className="w-5 h-5 ml-2" />
+          </button>
+
+          {/* Projects Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("projects")}
+              className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full"
+            >
+              Projects
+            </button>
+            {openDropdown === "projects" && (
+              <div className="bg-gray-700 rounded-lg shadow-lg mt-2">
+                <a
+                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Personal Portfolio
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/Advent"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Advent of Code
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/MetaBS"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Meta Brawl Stars
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            )}
+          </div>
+
+          {/* Certifications Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("certifications")}
+              className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full"
+            >
+              Certifications
+            </button>
+            {openDropdown === "certifications" && (
+              <div className="bg-gray-700 rounded-lg shadow-lg mt-2">
+                <a
+                  href="https://www.credly.com/badges/d4683e3a-e78c-451e-91ac-1fdc21e42e64/linked_in?t=rhdsh3"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  AWS Solutions Architect
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            )}
+          </div>
+
+          {/* Socials Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("socials")}
+              className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full"
+            >
+              Socials
+            </button>
+            {openDropdown === "socials" && (
+              <div className="bg-gray-700 rounded-lg shadow-lg mt-2">
+                <a
+                  href="https://www.linkedin.com/in/calvinjmin/"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  LinkedIn
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Github
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="mailto: calvinjmin@gmail.com"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Email
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
