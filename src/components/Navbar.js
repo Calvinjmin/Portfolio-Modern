@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import {
   ArrowTopRightOnSquareIcon,
+  ChevronDownIcon,
   DocumentTextIcon,
-} from "@heroicons/react/24/outline"; // Ensure correct import path
+} from "@heroicons/react/24/outline";
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -17,7 +18,7 @@ export default function Navbar() {
   };
 
   const handleNavigation = (url) => {
-    window.location.href = url;
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -39,7 +40,11 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-4 ml-auto">
           {/* Resume Link */}
           <button
-            onClick={() => handleNavigation("https://drive.google.com/file/d/11IbURcbvUV6PHcMvZQ96yU8btLkqT9qI/view?usp=sharing")}
+            onClick={() =>
+              handleNavigation(
+                "https://drive.google.com/file/d/11IbURcbvUV6PHcMvZQ96yU8btLkqT9qI/view?usp=sharing"
+              )
+            }
             className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
           >
             Resume
@@ -53,18 +58,14 @@ export default function Navbar() {
               className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
             >
               Projects
+              <ChevronDownIcon className="w-5 h-5 ml-2" />
             </button>
             {openDropdown === "projects" && (
               <div className="absolute top-full mt-2 w-48 bg-gray-700 rounded-lg shadow-lg">
                 <a
-                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Personal Portfolio
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
                   href="https://github.com/Calvinjmin/Advent"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   Advent of Code
@@ -72,9 +73,29 @@ export default function Navbar() {
                 </a>
                 <a
                   href="https://github.com/Calvinjmin/MetaBS"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   Meta Brawl Stars
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Personal Portfolio
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/NBA-Web-Scraping"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  NBA Web Scraping
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
               </div>
@@ -88,11 +109,14 @@ export default function Navbar() {
               className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
             >
               Certifications
+              <ChevronDownIcon className="w-5 h-5 ml-2" />
             </button>
             {openDropdown === "certifications" && (
               <div className="absolute top-full mt-2 w-48 bg-gray-700 rounded-lg shadow-lg">
                 <a
                   href="https://www.credly.com/badges/d4683e3a-e78c-451e-91ac-1fdc21e42e64/linked_in?t=rhdsh3"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   AWS Solutions Architect
@@ -109,11 +133,14 @@ export default function Navbar() {
               className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
             >
               Socials
+              <ChevronDownIcon className="w-5 h-5 ml-2" />
             </button>
             {openDropdown === "socials" && (
               <div className="absolute top-full mt-2 w-48 bg-gray-700 rounded-lg shadow-lg">
                 <a
                   href="https://www.linkedin.com/in/calvinjmin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   LinkedIn
@@ -121,6 +148,8 @@ export default function Navbar() {
                 </a>
                 <a
                   href="https://github.com/Calvinjmin"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   Github
@@ -165,7 +194,11 @@ export default function Navbar() {
         <div className="md:hidden bg-gray-800 p-4 absolute top-16 left-0 w-full z-50">
           {/* Resume Link */}
           <button
-            onClick={() => handleNavigation("https://drive.google.com/file/d/11IbURcbvUV6PHcMvZQ96yU8btLkqT9qI/view?usp=sharing")}
+            onClick={() =>
+              handleNavigation(
+                "https://drive.google.com/file/d/11IbURcbvUV6PHcMvZQ96yU8btLkqT9qI/view?usp=sharing"
+              )
+            }
             className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full mb-2"
           >
             Resume
