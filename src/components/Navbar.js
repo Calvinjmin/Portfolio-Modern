@@ -72,6 +72,15 @@ export default function Navbar() {
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
+                  href="https://github.com/Calvinjmin/Interview_Questions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Interview Prep
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
                   href="https://github.com/Calvinjmin/MetaBS"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -81,21 +90,21 @@ export default function Navbar() {
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
-                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Personal Portfolio
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
                   href="https://github.com/Calvinjmin/NBA-Web-Scraping"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   NBA Web Scraping
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Personal Portfolio
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
               </div>
@@ -216,24 +225,48 @@ export default function Navbar() {
             {openDropdown === "projects" && (
               <div className="bg-gray-700 rounded-lg shadow-lg mt-2">
                 <a
-                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Personal Portfolio
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
                   href="https://github.com/Calvinjmin/Advent"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   Advent of Code
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
+                  href="https://github.com/Calvinjmin/Interview_Questions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Interview Prep
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
                   href="https://github.com/Calvinjmin/MetaBS"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   Meta Brawl Stars
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/NBA-Web-Scraping"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  NBA Web Scraping
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Personal Portfolio
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
               </div>
