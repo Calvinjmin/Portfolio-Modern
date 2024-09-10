@@ -99,6 +99,15 @@ export default function Navbar() {
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
+                  href="https://github.com/Calvinjmin/numerai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Numer.ai
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
                   href="https://github.com/Calvinjmin/Portfolio-Modern/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -258,6 +267,15 @@ export default function Navbar() {
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   NBA Web Scraping
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/numerai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Numer.ai
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
