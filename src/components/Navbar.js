@@ -42,7 +42,7 @@ export default function Navbar() {
           <button
             onClick={() =>
               handleNavigation(
-                "https://drive.google.com/file/d/11IbURcbvUV6PHcMvZQ96yU8btLkqT9qI/view?usp=sharing"
+                "https://drive.google.com/file/d/1v2zVegzTO8zcBphsCZh7oVsuAlzSkrQ_/view?usp=sharing"
               )
             }
             className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
@@ -214,7 +214,7 @@ export default function Navbar() {
           <button
             onClick={() =>
               handleNavigation(
-                "https://drive.google.com/file/d/11IbURcbvUV6PHcMvZQ96yU8btLkqT9qI/view?usp=sharing"
+                "https://drive.google.com/file/d/1v2zVegzTO8zcBphsCZh7oVsuAlzSkrQ_/view?usp=sharing"
               )
             }
             className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full mb-2"
