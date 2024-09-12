@@ -72,6 +72,15 @@ export default function Navbar() {
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
+                  href="https://github.com/Calvinjmin/HoopStats"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Hoop Stats
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
                   href="https://github.com/Calvinjmin/Interview_Questions"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -87,15 +96,6 @@ export default function Navbar() {
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   Meta Brawl Stars
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/NBA-Web-Scraping"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  NBA Web Scraping
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
@@ -243,6 +243,15 @@ export default function Navbar() {
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
+                  href="https://github.com/Calvinjmin/HoopStats"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Hoop Stats
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
                   href="https://github.com/Calvinjmin/Interview_Questions"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -258,15 +267,6 @@ export default function Navbar() {
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   Meta Brawl Stars
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/NBA-Web-Scraping"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  NBA Web Scraping
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
