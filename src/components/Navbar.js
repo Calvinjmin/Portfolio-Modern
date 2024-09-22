@@ -116,6 +116,15 @@ export default function Navbar() {
                   Personal Portfolio
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
+                <a
+                  href="https://github.com/Calvinjmin/Trading-Simulator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Trading Simulator
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
               </div>
             )}
           </div>
@@ -285,6 +294,15 @@ export default function Navbar() {
                   className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
                 >
                   Personal Portfolio
+                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="https://github.com/Calvinjmin/Trading-Simulator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
+                >
+                  Trading Simulator
                   <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                 </a>
               </div>
