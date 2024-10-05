@@ -1,6 +1,6 @@
 import React from "react";
 import Article from "../components/Article";
-import { scribblePosts } from "../scribbles/ScribblePosts";
+import { scribblePosts } from "../content/ScribblePosts";
 
 import "../App.css";
 
