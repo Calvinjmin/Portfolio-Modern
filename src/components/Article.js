@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   CalendarIcon,
   ChevronRightIcon,
@@ -7,8 +7,15 @@ import {
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 
-const Article = ({ title, excerpt, content, publicationDate }) => {
+const Article = ({ title, excerpt, contentPath, publicationDate }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    fetch(contentPath)
+      .then((response) => response.text())
+      .then((text) => setContent(text));
+  }, [content, contentPath]);
 
   const calculateReadingLength = (text) => {
     const words = text.trim().split(/\s+/).length;
@@ -34,9 +41,18 @@ const Article = ({ title, excerpt, content, publicationDate }) => {
 
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-50 p-4">
-          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 lg:p-8 w-full max-w-[1000px] h-auto relative mx-auto overflow-y-auto max-h-[80vh]">
-            <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
-            <div className="flex items-center text-gray-500 mt-2">
+          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 lg:p-8 w-full max-w-[1000px] h-auto relative mx-auto overflow-y-auto max-h-[80vh] transition-all transform scale-105">
+            <div className="sticky top-0 bg-white z-10 p-2">
+              <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+              >
+                ✖️
+              </button>
+            </div>
+            
+            <div className="flex items-center text-gray-500 mt-2 sticky top-12 bg-white z-10 p-2">
               <CalendarIcon className="h-5 w-5 mr-1" />
               <p className="mr-2">{`${publicationDate}`}</p>
               <ClockIcon className="h-5 w-5 mr-1" />
@@ -46,12 +62,6 @@ const Article = ({ title, excerpt, content, publicationDate }) => {
             <div className="markdown text-gray-600 mt-4">
               <ReactMarkdown remarkPlugins={[gfm]}>{content}</ReactMarkdown>
             </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
-            >
-              ✖️
-            </button>
           </div>
         </div>
       )}
