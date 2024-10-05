@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   CalendarIcon,
   ChevronRightIcon,
@@ -9,6 +9,13 @@ import gfm from "remark-gfm";
 
 const Article = ({ title, excerpt, content, publicationDate }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [markdown, setMarkdown] = useState("");
+
+  useEffect(() => {
+    fetch(content)
+      .then((res) => res.text())
+      .then((text) => setMarkdown(text));
+  });
 
   const calculateReadingLength = (text) => {
     const words = text.trim().split(/\s+/).length;
@@ -44,7 +51,7 @@ const Article = ({ title, excerpt, content, publicationDate }) => {
                 ✖️
               </button>
             </div>
-            
+
             <div className="flex items-center text-gray-500 mt-2 sticky top-12 bg-white z-10 p-2">
               <CalendarIcon className="h-5 w-5 mr-1" />
               <p className="mr-2">{`${publicationDate}`}</p>
@@ -53,7 +60,7 @@ const Article = ({ title, excerpt, content, publicationDate }) => {
             </div>
 
             <div className="markdown text-gray-600 mt-4">
-              <ReactMarkdown remarkPlugins={[gfm]}>{content}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[gfm]}>{markdown}</ReactMarkdown>
             </div>
           </div>
         </div>
