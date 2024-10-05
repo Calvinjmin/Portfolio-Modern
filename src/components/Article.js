@@ -12,19 +12,18 @@ const Article = ({ title, excerpt, contentPath, publicationDate }) => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    if (contentPath) {
-      fetch(contentPath)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-          }
-          return response.text();
-        })
-        .then((text) => setContent(text))
-        .catch((error) => console.error('Error fetching content:', error));
-    }
+    console.log("Fetching content from:", contentPath); 
+    fetch(contentPath)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then((text) => setContent(text))
+      .catch((error) => console.error("Error fetching content:", error));
   }, [contentPath]);
-  
+
   const calculateReadingLength = (text) => {
     const words = text.trim().split(/\s+/).length;
     const readingSpeed = 150;
@@ -59,7 +58,7 @@ const Article = ({ title, excerpt, contentPath, publicationDate }) => {
                 ✖️
               </button>
             </div>
-            
+
             <div className="flex items-center text-gray-500 mt-2 sticky top-12 bg-white z-10 p-2">
               <CalendarIcon className="h-5 w-5 mr-1" />
               <p className="mr-2">{`${publicationDate}`}</p>
