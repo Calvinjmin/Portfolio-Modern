@@ -12,11 +12,19 @@ const Article = ({ title, excerpt, contentPath, publicationDate }) => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch(contentPath)
-      .then((response) => response.text())
-      .then((text) => setContent(text));
-  }, [content, contentPath]);
-
+    if (contentPath) {
+      fetch(contentPath)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.text();
+        })
+        .then((text) => setContent(text))
+        .catch((error) => console.error('Error fetching content:', error));
+    }
+  }, [contentPath]);
+  
   const calculateReadingLength = (text) => {
     const words = text.trim().split(/\s+/).length;
     const readingSpeed = 150;
