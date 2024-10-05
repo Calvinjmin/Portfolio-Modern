@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   CalendarIcon,
   ChevronRightIcon,
@@ -7,22 +7,8 @@ import {
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 
-const Article = ({ title, excerpt, contentPath, publicationDate }) => {
+const Article = ({ title, excerpt, content, publicationDate }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [content, setContent] = useState("");
-
-  useEffect(() => {
-    console.log("Fetching content from:", contentPath); 
-    fetch(contentPath)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.text();
-      })
-      .then((text) => setContent(text))
-      .catch((error) => console.error("Error fetching content:", error));
-  }, [contentPath]);
 
   const calculateReadingLength = (text) => {
     const words = text.trim().split(/\s+/).length;
@@ -58,7 +44,7 @@ const Article = ({ title, excerpt, contentPath, publicationDate }) => {
                 ✖️
               </button>
             </div>
-
+            
             <div className="flex items-center text-gray-500 mt-2 sticky top-12 bg-white z-10 p-2">
               <CalendarIcon className="h-5 w-5 mr-1" />
               <p className="mr-2">{`${publicationDate}`}</p>

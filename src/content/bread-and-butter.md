@@ -1,9 +1,4 @@
-export const scribblePosts = [
-  {
-    title: "Bread and Butter",
-    excerpt:
-      "Given my year and change of expertise, here are my go-to Boston restaurants",
-    content: `To preface, Boston has a lackluster food scene.
+To preface, Boston has a lackluster food scene.
 It frequently falls short of New York City due to its limited variety of cuisines,
 deficiency of creativity in the culinary space, and perhaps, most disappointingly,
 the presence of affordable and comforting Korean dining options - not that I am biased.
@@ -33,7 +28,3 @@ While I love keeping my favorite food spots a secret, I figure that if I share t
 Notice that there is an absence of Korean restaurants on this list ... I would recommend taking a **$50 Amtrak** to NYC for that.
 
 *cjm*
-`,
-    publicationDate: "10/5/2024",
-  },
-];
