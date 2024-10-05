@@ -3,6 +3,7 @@ import {
   ArrowTopRightOnSquareIcon,
   ChevronDownIcon,
   DocumentTextIcon,
+  PencilIcon,
 } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
@@ -17,8 +18,12 @@ export default function Navbar() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const handleNavigation = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
+  const handleNavigation = (url, isResume = false) => {
+    if (isResume) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      window.location.href = url;
+    }
   };
 
   return (
@@ -38,11 +43,22 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-4 ml-auto">
+          {/* Scribbles */}
+          <button
+            onClick={() =>
+              handleNavigation(`${window.location.origin}/scribbles`, false)
+            }
+            className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
+          >
+            Scribbles
+            <PencilIcon className="w-5 h-5 ml-2" />
+          </button>
           {/* Resume Link */}
           <button
             onClick={() =>
               handleNavigation(
-                "https://drive.google.com/file/d/1vZW5sa05HoEc4KYwcVRCrRBw_HOHrK3i/view?usp=sharing"
+                "https://drive.google.com/file/d/1vZW5sa05HoEc4KYwcVRCrRBw_HOHrK3i/view?usp=sharing",
+                true
               )
             }
             className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
@@ -219,11 +235,22 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-gray-800 p-4 absolute top-16 left-0 w-full z-50">
+          {/* Scribbles */}
+          <button
+            onClick={() =>
+              handleNavigation(`${window.location.origin}/scribbles`, false)
+            }
+            className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
+          >
+            Scribbles
+            <PencilIcon className="w-5 h-5 ml-2" />
+          </button>
           {/* Resume Link */}
           <button
             onClick={() =>
               handleNavigation(
-                "https://drive.google.com/file/d/1vZW5sa05HoEc4KYwcVRCrRBw_HOHrK3i/view?usp=sharing"
+                "https://drive.google.com/file/d/1vZW5sa05HoEc4KYwcVRCrRBw_HOHrK3i/view?usp=sharing",
+                true
               )
             }
             className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full mb-2"
