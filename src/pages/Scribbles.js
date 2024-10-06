@@ -12,7 +12,7 @@ const Scribbles = () => {
         <header className="text-center my-8">
           <h1 className="text-4xl font-bold text-gray-800">Scribbles</h1>
           <p className="text-lg text-gray-600">
-            Anything and everything about traveling, running, and eating.
+            Anything and everything about eating, traveling, running, and more
           </p>
         </header>
         <div className="flex flex-wrap">

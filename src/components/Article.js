@@ -30,8 +30,18 @@ const Article = ({ title, excerpt, content, publicationDate }) => {
   return (
     <>
       <article className="mb-6 bg-white rounded-lg shadow-lg p-4 md:p-6 min-w-[90%] max-w-[1000px] mx-auto h-auto">
-        <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
+        <div className="flex flex-col md:flex-row items-center text-gray-500 mt-2 sticky top-12 bg-white z-10 p-2">
+          <h2 className="text-2xl font-semibold text-gray-800 pr-4">{title}</h2>
+          <div className="flex items-center mt-2 md:mt-0">
+            <CalendarIcon className="h-5 w-5 mr-1" />
+            <p className="mr-2">{`${publicationDate}`}</p>
+            <ClockIcon className="h-5 w-5 mr-1" />
+            <p>{`${readingLength} min`}</p>
+          </div>
+        </div>
+
         <p className="text-gray-600 mt-2">{excerpt}</p>
+
         <button
           onClick={() => setIsOpen(true)}
           className="flex items-center text-blue-500 hover:underline mt-4"

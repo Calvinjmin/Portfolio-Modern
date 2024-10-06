@@ -12,13 +12,12 @@ They often lack the quality of food to justify the prices on their menu,
 and this creates a frustrating situation for food lovers like myself, who want great meals without
 emptying their wallets. With this in mind, I have compiled a list of restaurants I have enjoyed with at least one other person, and I feel semi-confident in recommending them.
 
-* **Krasi (Back Bay)** - A casual Greek restaurant that serves freshly made tzatziki at the table and offers a generous selection of meat-based dishes.
+* **Krasi (Back Bay)** - A casual Greek restaurant that serves freshly made tzatziki at the table and features a generous selection of meat-based dishes.
 * **Matsunori Hand Roll (Fenway-Kenmore)** - I'm usually not a fan of sushi, but their miso-cod hand roll is to die for.
-* **Yume Ga Arukara (Porter Square)** - This hole-in-the-wall udon restaurant does its job well by providing delicious udon.
+* **Yume Ga Arukara (Porter Square)** -  This hole-in-the-wall udon restaurant is unpretentious and offers consistently high-quality meals.
 * **Monica's Mercato (North End)** - A sandwich shop that will live rent-free for at least a week.
-* **Bom Dough (Inman Square)** - A Brazilian-inspired coffee shop that serves tasty matcha lattes and fresh pão de queijo.
-* **Berryline (Harvard Square)** - It pains me to share this place because I want to keep it a secret, but the public needs to know.
-Berryline is the best-frozen yogurt I have ever had - make an effort to try it out.
+* **Bom Dough (Inman Square)** - A Brazilian-inspired coffee shop that specialize in matcha lattes and pão de queijo.
+* **Berryline (Harvard Square)** - It pains me to share this place because I want to keep it a secret, but the public needs to know. Berryline is the best-frozen yogurt I have ever had - make an effort to try it out.
 
 All this is to say that everyone has their preferences and needs, but you can't go wrong with the places listed above—especially Berryline.
 While I love keeping my favorite food spots a secret, I figure that if I share them with my friends, I might as well share them with everyone!
