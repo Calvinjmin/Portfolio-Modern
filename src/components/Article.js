@@ -10,12 +10,7 @@ import gfm from "remark-gfm";
 const Article = ({ title, excerpt, content, publicationDate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [markdown, setMarkdown] = useState("");
-
-  useEffect(() => {
-    fetch(content)
-      .then((res) => res.text())
-      .then((text) => setMarkdown(text));
-  });
+  const [readingLength, setReadingLength] = useState(0);
 
   const calculateReadingLength = (text) => {
     const words = text.trim().split(/\s+/).length;
@@ -23,7 +18,14 @@ const Article = ({ title, excerpt, content, publicationDate }) => {
     return Math.ceil(words / readingSpeed);
   };
 
-  const readingLength = calculateReadingLength(content);
+  useEffect(() => {
+    fetch(content)
+      .then((res) => res.text())
+      .then((text) => {
+        setMarkdown(text);
+        setReadingLength(calculateReadingLength(text));
+      });
+  }, [content]);
 
   return (
     <>
