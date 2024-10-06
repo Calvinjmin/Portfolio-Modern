@@ -4,7 +4,7 @@ export const scribblePosts = [
     excerpt:
       "A glimpse of my journey with Chat GPT",
     content: "/scribble-content/chat-gpt-reflection.md",
-    publicationDate: "10/6/2024",
+    publicationDate: "10/5/2024",
   },
   {
     title: "Bread and Butter",
