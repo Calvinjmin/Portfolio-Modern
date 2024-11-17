@@ -4,6 +4,7 @@ import {
   ChevronDownIcon,
   DocumentTextIcon,
   PencilIcon,
+  PuzzlePieceIcon,
 } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
@@ -27,7 +28,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-gray-800 p-4 top-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Avatar and Site Name Container */}
         <div className="flex items-center space-x-4">
@@ -67,82 +68,17 @@ export default function Navbar() {
             <DocumentTextIcon className="w-5 h-5 ml-2" />
           </button>
 
-          {/* Projects Dropdown */}
+          {/* Projects */}
           <div className="relative">
             <button
-              onClick={() => toggleDropdown("projects")}
+              onClick={() =>
+                handleNavigation(`${window.location.origin}/projects`, false)
+              }
               className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
             >
               Projects
-              <ChevronDownIcon className="w-5 h-5 ml-2" />
+              <PuzzlePieceIcon className="w-5 h-5 ml-2" />
             </button>
-            {openDropdown === "projects" && (
-              <div className="absolute top-full mt-2 w-48 bg-gray-700 rounded-lg shadow-lg">
-                <a
-                  href="https://github.com/Calvinjmin/Advent"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Advent of Code
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/HoopStats"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Hoop Stats
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/Interview_Questions"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Interview Prep
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/MetaBS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Meta Brawl Stars
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/numerai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Numer.ai
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Personal Portfolio
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/Trading-Simulator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Trading Simulator
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-              </div>
-            )}
           </div>
 
           {/* Certifications Dropdown */}
@@ -253,88 +189,22 @@ export default function Navbar() {
                 true
               )
             }
-            className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full mb-2"
+            className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
           >
             Resume
             <DocumentTextIcon className="w-5 h-5 ml-2" />
           </button>
 
-          {/* Projects Dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("projects")}
-              className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center w-full"
-            >
-              Projects
-            </button>
-            {openDropdown === "projects" && (
-              <div className="bg-gray-700 rounded-lg shadow-lg mt-2">
-                <a
-                  href="https://github.com/Calvinjmin/Advent"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Advent of Code
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/HoopStats"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Hoop Stats
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/Interview_Questions"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Interview Prep
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/MetaBS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Meta Brawl Stars
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/numerai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Numer.ai
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/Portfolio-Modern/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Personal Portfolio
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="https://github.com/Calvinjmin/Trading-Simulator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:bg-gray-600 flex items-center justify-between"
-                >
-                  Trading Simulator
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
-              </div>
-            )}
-          </div>
+          {/* Projects */}
+          <button
+            onClick={() =>
+              handleNavigation(`${window.location.origin}/projects`, false)
+            }
+            className="text-white hover:bg-gray-700 px-3 py-2 rounded flex items-center"
+          >
+            Projects
+            <PuzzlePieceIcon className="w-5 h-5 ml-2" />
+          </button>
 
           {/* Certifications Dropdown */}
           <div className="relative">
