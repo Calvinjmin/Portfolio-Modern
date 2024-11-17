@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 import Navbar from "./components/Navbar";
 import Scribbles from "./pages/Scribbles";
 
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/scribbles" element={<Scribbles />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
         {/* Bottom Text */}
