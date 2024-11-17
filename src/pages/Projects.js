@@ -24,12 +24,6 @@ export default function Projects() {
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden w-full sm:w-64 lg:w-72 p-4 hover:shadow-xl transition-all duration-300"
               >
-                {/* Project Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                />
                 {/* Project Info */}
                 <p className="text-xl font-semibold text-gray-800 hover:text-blue-500">
                   {project.title}

@@ -14,7 +14,7 @@ const Home = () => {
             <img
               className="rounded-xl"
               alt="Home Page"
-              src="/images/home_image.jpg"
+              src="/images/home.jpg"
             />
             <p className="text-lg mt-4">
               Hi, I'm Calvin Min, a current Software Engineer at Capital One
