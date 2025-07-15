@@ -38,7 +38,10 @@ export default function Navbar() {
               alt="Avatar"
               className="w-10 h-10 rounded-full border-2 border-gray-600 shadow-md"
             />
-            <a href="/" className="text-white text-xl sm:text-2xl font-bold tracking-tight hover:text-gray-300 transition-colors">
+            <a
+              href="/"
+              className="text-white text-xl sm:text-2xl font-bold tracking-tight hover:text-gray-300 transition-colors"
+            >
               Calvin Min
             </a>
           </div>
@@ -98,6 +101,24 @@ export default function Navbar() {
                     className="block px-4 py-3 text-white hover:bg-gray-600 flex items-center justify-between transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
                   >
                     <span className="text-sm">AWS Solutions Architect</span>
+                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://learn.microsoft.com/en-us/users/calvinmin-9590/credentials/b2d5ffb310a884cc?ref=https%3A%2F%2Fwww.linkedin.com%2F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 text-white hover:bg-gray-600 flex items-center justify-between transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                  >
+                    <span className="text-sm">AZ 104: Azure Administrator Associate</span>
+                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://credentials.databricks.com/aaa149e1-d850-460f-92bd-ef0cbd6f6970#acc.6kp50ybA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 text-white hover:bg-gray-600 flex items-center justify-between transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                  >
+                    <span className="text-sm">Databricks Certified Data Engineer Associate</span>
                     <ArrowTopRightOnSquareIcon className="w-4 h-4" />
                   </a>
                 </div>
@@ -192,7 +213,7 @@ export default function Navbar() {
               <PencilIcon className="w-5 h-5 mr-3" />
               Scribbles
             </button>
-            
+
             {/* Resume Link */}
             <button
               onClick={() => {
@@ -227,7 +248,11 @@ export default function Navbar() {
                 className="w-full text-left text-white hover:bg-gray-700 px-4 py-3 rounded-md flex items-center justify-between text-base font-medium transition-colors"
               >
                 <span>Certifications</span>
-                <ChevronDownIcon className={`w-5 h-5 transition-transform ${openDropdown === "certifications" ? "rotate-180" : ""}`} />
+                <ChevronDownIcon
+                  className={`w-5 h-5 transition-transform ${
+                    openDropdown === "certifications" ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               {openDropdown === "certifications" && (
                 <div className="bg-gray-700 rounded-lg shadow-lg mt-2 ml-4">
@@ -252,7 +277,11 @@ export default function Navbar() {
                 className="w-full text-left text-white hover:bg-gray-700 px-4 py-3 rounded-md flex items-center justify-between text-base font-medium transition-colors"
               >
                 <span>Socials</span>
-                <ChevronDownIcon className={`w-5 h-5 transition-transform ${openDropdown === "socials" ? "rotate-180" : ""}`} />
+                <ChevronDownIcon
+                  className={`w-5 h-5 transition-transform ${
+                    openDropdown === "socials" ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               {openDropdown === "socials" && (
                 <div className="bg-gray-700 rounded-lg shadow-lg mt-2 ml-4 space-y-1">
