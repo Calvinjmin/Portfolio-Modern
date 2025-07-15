@@ -21,7 +21,7 @@ function App() {
         </div>
         {/* Bottom Text */}
         <div className="absolute bottom-4 right-4 text-right text-gray-600"> {/* Positioned at bottom right */}
-          <p>Calvin Min | 2024</p>
+          <p>Calvin Min | 2025</p>
         </div>
       </div>
     </Router>
