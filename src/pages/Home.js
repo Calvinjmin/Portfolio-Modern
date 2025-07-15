@@ -17,8 +17,14 @@ const Home = () => {
               src="/images/home.jpg"
             />
             <p className="text-lg mt-4">
-              Hi, I'm Calvin Min, a current Software Engineer at Capital One
-              based in Boston, MA. I recently graduated from the{" "}
+              Hi, I'm Calvin Min, a current Solutions Engineer at {" "} 
+              <a
+                className="text-blue-500 hover:underline"
+                href="https://www.databricks.com/"
+              >
+                 Databricks 
+              </a>
+               {" "} based in New York City, NY. I recently graduated from the{" "}
               <a
                 className="text-blue-500 hover:underline"
                 href="https://engineering.virginia.edu/"

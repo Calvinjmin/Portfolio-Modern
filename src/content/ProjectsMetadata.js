@@ -8,6 +8,13 @@ export const projectsMetadata = [
     tags: ["C++", "Python"],
   },
   {
+    title: "wyaFile",
+    link: "https://github.com/Calvinjmin/wyaFile",
+    image: "",
+    description: "Modernize Grep! An indexing tool for you local files.",
+    tags: ["C++", "Shell", "CMake"]
+  },
+  {
     title: "Hoop Stats",
     link: "https://github.com/Calvinjmin/HoopStats",
     image: "https://via.placeholder.com/400x250?text=Hoop+Stats",
