@@ -1,4 +1,3 @@
-import React from "react";
 import { projectsMetadata } from "../content/ProjectsMetadata";
 
 import "../App.css";

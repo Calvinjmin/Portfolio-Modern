@@ -8,10 +8,24 @@ export const projectsMetadata = [
     tags: ["C++", "Python"],
   },
   {
+    title: "Databricks CPP SDK",
+    link: "https://github.com/Calvinjmin/databricks-sdk-cpp",
+    description:
+      "An open-source, CPP SDK that interacts with Databricks' API.",
+    tags: ["C++", "Databricks", "SDK"],
+  },
+  {
+    title: "Realtime RAG Agent",
+    link: "https://github.com/databricks-solutions/realtime-rag-agents-databricks-youcom",
+    description:
+      "Production-ready implementation of a RAG-powered AI Agent on Databricks with You.com",
+    tags: ["Agentic AI", "Solutions Accelerator", "RAG", "Databricks", "You.com"],
+  },
+  {
     title: "wyaFile",
     link: "https://github.com/Calvinjmin/wyaFile",
     image: "",
-    description: "Modernize Grep! An indexing tool for you local files.",
+    description: "Modernize Grep! An indexing tool for your local files.",
     tags: ["C++", "Shell", "CMake"]
   },
   {
@@ -28,14 +42,6 @@ export const projectsMetadata = [
     description:
       "A collection of solutions to common coding interview questions.",
     tags: ["C++", "Python"],
-  },
-  {
-    title: "Numer.ai",
-    link: "https://github.com/Calvinjmin/numerai",
-    image: "https://via.placeholder.com/400x250?text=Numer.ai",
-    description:
-      "My bare-bones solutions to challenges on the data science competition platform for predictive modeling.",
-    tags: ["Python", "Jupyter"],
   },
   {
     title: "Personal Portfolio",
